@@ -1,0 +1,17 @@
+BeautifulSoup
+
+html.parse  这个是python中对HTML的一个解析器   具体用法看本章代码即可知晓
+
+page.find("标签名",attrs={"属性":"值"})   #查找某个元素,只会找到一个结果
+.find_all和上面的.find的区别就是查找一个     find_all是找全部
+.text
+如果只想拿里面文本可以再结尾加一个.text这个就是文本的意思
+.gat
+如果只想要里面属性的值可以.gat("属性名") 因为href(谐音:孩夫)后面跟的一般都是属性值所以属性值后面一般写href
+
+
+.find_all
+.find_all一般这个要和.find搭配上循环使用不然直接把所有的东西都弄过来看着有点乱   #示列如代码里面去找
+
+
+BeautifulSoup里面用的最多的也就find 和 find_all了其他的不经常用重点记忆这两个

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!-- 通过link这个标签就可以把写好的css引用进来，引进来之后网页上面的所有标签都遵循这个备引用进来的标签-->
+    <link rel="stylesheet" href="css基础语法.css">
+          <!--    <style>表示当前这个页面可以使用的一个效果比如说我再里面加入一个span这个是选择器的一个意思放在一块
+就是选择页面上那些东西被添加以下效果-->
+    <style>
+        /*这个差不多就是css里面一个选择器的意思可以选择被标记的一个标签然后全局都是这样的一个效果*/
+        /*我门爬虫刚好可以用上选择器来进行快速的一个查找*/
+        span{
+            /*这个就是网页上面的所有标签都会被添加上粉色的一个效果*/
+            color:pink;
+        }
+    </style>
+
+</head>
+<body>
+<!--这种一般是素颜的一个效果
+  <div>你好我叫周润发</div>没有一个展示的一个效果如果相加上一个效果的话就要加上一些方式
+  style是样式的一个意思 然后下面那一行代码就是加上一个红色的一个边框的一个效果1px solid red这个
+  是一个像素的红颜色的一个实现-->
+        <div style="width:100px;height:100px;border: 1px solid red">你好我叫周润发</div>
+        <span>我在上面被添加成粉色了</span>
+</body>
+</html>

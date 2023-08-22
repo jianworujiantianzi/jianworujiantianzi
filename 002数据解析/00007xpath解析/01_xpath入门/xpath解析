@@ -1,0 +1,52 @@
+xpath解析
+xpath是一门再XML 文档中查找信息的语言.XPath可以再XML 文档中对元素和属性进行遍历
+而我们熟知的HTML恰巧属于XML的子集 完全可以使用xpath来查找HTML中的内容
+
+首先我们来了解几个概念
+
+
+<book>
+    <id></id>
+    <name>野花遍地香</name>
+    <price>1.23</price>
+    <author>
+        <nick>周大强</nick>
+        <nack>周芷若</nack>
+    </author>
+</book>
+
+这个是一个XML代码很像HTML代码但是这个不是HTML代码这个是XML代码但是看着差不多
+就像上面那样的代码到了XML里面这些叫节点和标签差不多是一样的意思
+这里面节点与节点之间是有一定的关联的比如说上面的book就是id的父节点 id就是book的子节点
+简单的来讲就是谁包着谁谁就是爹
+    谁被包谁就是谁的儿子
+    很多同时被包的叫同胞
+专业用语就是 父节点 子节点 同胞节点
+
+XPATH想要再python上用的话就用lxml模块
+这个需要pip install lxml来下载安装
+
+这个导入的时候有些头疼
+    有些电脑导入的时候直接from lxml import etree就可以导入Tab键就可以补全
+    还有一些这种方式不好使 导入的时候引用的时候会报错，引用不了这时候可以用以下方式去解决
+解决办法
+      不导入这个模块改导入html模块然后转etree方法如下
+from lxml import html
+etree = html.etree      记得点
+    导入不了的时候才用到，能导入就不用
+
+
+etree这个东西里面的工具有很多我们爬虫能用的上的就XML和HTML这两个工具并且etree.HTML()是最常用的
+
+注意；
+/表示的是根节点
+
+
+
+
+
+
+
+
+
+

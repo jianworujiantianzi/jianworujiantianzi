@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  第二部添加选择器-->
+    <style>
+        /*id选择器*/
+        /*  #代表的是id的意思 这一整句的意思就是所有的Id都是pink颜色*/
+      #abc{
+        color: #823550;
+      }
+        /*标签选择器li*/
+        /*li在这里就是所有的标签的意思*/
+        li{
+            border: 1px solid #fb00ff;
+        }
+        /*.所有哪一类的东西就是有相同地方的比如说被标记实验1的那一行
+          代码两个不一样的标签都想变颜色就在后面添加一个
+            同样的属性比如说class= "这里面放入同样的属性"*/
+        .我要变色{
+            color: #315EFB;
+        }
+        /*当然还可以选择器分组就是把两个标签添加同样的样式  记得用逗号隔开 比如实验二
+        这样子就可以把两个标签都给换成同样的颜色    用白话来说就是他们两个一组一起来添加这个颜色*/
+        biaoqianyi,biaoqianer{
+            color: #cc2929;
+        }
+        /*空格就是选择某一个标签里面的所有的一类的标签添加操作 比如实验三就是把ol里面的所有的li标签添加颜色
+        空格表示的是子子孙孙所有的后代都有这个属性*/
+        ol li{
+            color: #1D4FFF;
+        }
+        /*这个表示所有的儿子那一带也就是里面的第一代的li带有属性但是li里面的下一代就没有这个属性了
+        不过这一行跟上一行有冲突这两个只执行一个就好了*/
+        ol > li{
+            color: #1D4FFF;
+        }
+        /*这个就比较有意思了这个是所有的a标签里面有括号里面的属性的进行属性改变没有的不进行改变*/
+        a[target]{
+            color: #0ebe90;
+        }
+        /*当然也可以像这样子选择属性 下面这个属性的意思就是把所有的a标签里面的有对应的属性的全部把横线去掉*/
+        a[target='_blank']{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<!--    第一步-->
+    <ul>
+        <li>周润发</li>
+        <li id="abc">黎明</li>
+        <li>周星驰</li>
+        <li>Sylar</li>
+    </ul>
+<!--实验1-->
+        <div class="我要变色">呵呵哒哒</div>
+        <span class="我要变色">呵呵呵</span>
+<!--实验二-->
+        <biaoqianyi>见我如见天子</biaoqianyi>
+        <biaoqianer>我乃九九人皇</biaoqianer>
+<!--实验三-->
+    <ol>
+        <li>手电筒</li>
+            <ol>
+                <li>
+                    子层
+                </li>
+            </ol>
+        <li>电视机</li>
+        <li>黑板擦</li>
+    </ol>
+<!--实验四属性选择器-->
+<a href="#" target="_blank">我是百度</a>
+<a href="#" target="_blank">我是谷歌</a>
+<a href="#" >我是啥也没有</a>
+</body>
+</html>
