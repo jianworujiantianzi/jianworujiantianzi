@@ -1,0 +1,22 @@
+import random
+
+# 生成一个随机数
+number = random.randint(1, 100)
+
+# 提示玩家猜数字
+print("我想了一个1到100之间的数字，你猜是多少？才对有奖励吆")
+
+# 让玩家猜数字
+guess = int(input())
+
+# 判断猜的数字是否正确
+while guess != number:
+    if guess < number:
+        print("猜错了猜的太小了，罚你V我2块再试试吧，提醒一下再猜大一点")
+    else:
+        print("猜错了猜的太大了，罚你V我2块再试试吧，提醒一下再猜小一点")
+    guess = int(input())
+
+# 玩家猜对了
+print("恭喜你，猜对了找我领取一元奖励嘻嘻！")
+input()
