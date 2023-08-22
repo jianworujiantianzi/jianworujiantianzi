@@ -1,0 +1,21 @@
+# 定义计算函数
+def aa (a, b, c):
+    if b == '+':
+        return a + c
+    elif b == '-':
+        return a - c
+    elif b == '*':
+        return a * c
+    elif b == '/':
+        return a / c
+    else:
+        return "无效的运算符"
+
+# 获取用户输入
+a= float(input("请输入第一个数字: "))
+b= input("请输入运算符 (+, -, *, /): ")
+aaa = float(input("请输入第二个数字: "))
+
+# 调用计算函数并输出结果
+aa1 = aa(a, b, aaa)
+print("计算结果为: ", aa1)
