@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    导入方法1-->
+<!--    <link rel="stylesheet" href="../static/inddex.css">-->
+    <!--    导入方法2-->
+<!--    <link rel="stylesheet" href="/static/inddex.css">-->
+
+
+<!--    第三种导入方法     使用url_for这个相当于调一个函数
+        然后往里面掉static，然后再去写filname=要传的css路径-->
+    <link rel="stylesheet" href="{{url_for('static',filename='inddex.css')}}">
+
+</head>
+<body>
+<!--    -->
+    <h2>index</h2>
+<!--前端有一个模板语言,把这个模板语言写入刚刚传进来的变量
+    这个变量一定要用大括号包裹起来
+    -->
+    <h4>name:{{ name }}</h4>
+</body>
+</html>
